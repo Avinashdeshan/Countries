@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countries Album</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        header {
+            background-color: #0080ff;
+        }
+
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: #e9b47c;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        footer {
+            background-color: #f28d35;
+        }
+
+        .btn-primary {
+            background-color: #006adb;
+            border-color: #0056b3;
+        }
+
+        .btn-primary:hover {
+            background-color: #004085;
+            border-color: #00306f;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark"><br>
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Places</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Culture</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                        id="txtSearch">
+                    <button class="btn btn-outline-success" type="submit" onclick="searchCountry()">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <header data-bs-theme="dark">
+        <div class="collapse text-bg-dark" id="navbarHeader">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-md-7 py-4">
+                        <h4>About</h4>
+                        <p class="text-body-secondary">A country is a nation, a body of land with one government. Rural
+                            areas outside cities are also known as the country. The world has many unique countries,
+                            each with a central government and identity.</p>
+                    </div>
+                    <div class="col-sm-4 offset-md-1 py-4">
+                        <h4>Contact</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-white">Follow on Twitter</a></li>
+                            <li><a href="#" class="text-white">Like on Facebook</a></li>
+                            <li><a href="#" class="text-white">Email me</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navbar navbar-dark bg-dark shadow-sm">
+            <div class="container">
+                <a href="#" class="navbar-brand d-flex align-items-center">
+                    <strong>Countries</strong>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader"
+                    aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="album py-5 bg-light">
+            <div class="container">
+                <h1 class="text-center mb-4">Explore Countries</h1><br>
+
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4" id="row">
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="https://via.placeholder.com/300x200" class="bd-placeholder-img card-img-top"
+                                alt="Country Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Country Name</h5>
+                                <p class="card-text">A brief description of the country goes here, highlighting unique
+                                    features.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <button type="button" class="btn btn-sm btn-primary">Learn More</button>
+                                    <small class="text-muted">Population: 1M+</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-body-secondary py-5">
+        <div class="container">
+            <p class="float-end mb-1">
+                <a href="#">Back to top</a>
+            </p>
+            <p class="mb-1">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+            <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a
+                    href="/docs/5.3/getting-started/introduction/">getting started guide</a>.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
